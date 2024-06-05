@@ -1,0 +1,28 @@
+#common properties
+server:
+  port: 5645
+
+spring:
+  application:
+    name: myApi
+  profiles:
+    active: local
+  # 跨域设置
+  datasource: # 数据源的相关配置
+    url: jdbc:mysql://localhost:3306/gd_data?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: Ezoo@2021
+
+  servlet:
+    multipart:
+      max-file-size: 1024MB
+      max-request-size: 1024MB
+  jackson:
+    #格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+logging:
+  file:
+    path: ./logs
+  level:
+    root: info
